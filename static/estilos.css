@@ -49,3 +49,7 @@ footer{
     background-color: #0B1849;
     color: #cbcbcb;
 }
+
+small{
+    font-size: x-small;
+}
