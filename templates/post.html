@@ -1,0 +1,19 @@
+{% extends 'plantilla.html' %}
+
+{% block titulo %}
+    Publicar
+{% endblock %}
+
+{% block pagina %}
+    Hacer una publicacion
+{% endblock %}
+
+{% block contenido %}
+    <div>
+        <form action="/post" method="post">
+            <textarea name="post" id="publi" cols="50" rows="10"></textarea>
+            <br>
+            <input type="submit" value="Publicar">
+        </form>
+    </div>
+{% endblock %}
