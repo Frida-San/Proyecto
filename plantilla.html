@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        CA | {% block titulo %}
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+    <header>
+        <h1>CardAlley</h1>
+        <h2>
+            {% block pagina %}
+            {% endblock %}
+        </h2>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+            <li>
+                <a href="/registro">Registro</a>
+            </li>
+            <li>
+                <a href="/login">Inciar sesion</a>
+            </li>
+            <li>
+                <a href="/perfil">Perfil</a>
+            </li>
+            <li>
+                <a href="/publicar">Anadir publicacion</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        {% block contenido %}
+            
+        {% endblock %}
+    </main>
+</body>
+
+<footer>
+    {% block pie %}
+        
+    {% endblock %}
+</footer>
+</html>

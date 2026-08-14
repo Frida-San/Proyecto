@@ -1,0 +1,46 @@
+@media only screen and (max-width: 600px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #cbcbcb;
+    color: black;
+}
+
+header{
+    background-color: #0B1849;
+    color: #cbcbcb;
+}
+
+.menu{
+    background-color: #124d1c !important;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+
+li{
+    text-decoration: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #cbcbcb;
+}
+
+footer{
+    background-color: #0B1849;
+    color: #cbcbcb;
+}
