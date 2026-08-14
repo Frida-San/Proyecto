@@ -1,0 +1,23 @@
+{% extends 'plantilla.html' %}
+
+{% block titulo %}
+    Iniciar sesion
+{% endblock %}
+
+{% block pagina %}
+    Iniciar sesion
+{% endblock %}
+
+{% block contenido %}
+    <div>
+        <form action="/login" method="post">
+            <label for="correo">Correo: </label>
+            <input type="email" name="correo" id="correo">
+            <br>
+            <label for="pass">Contrasena: </label>
+            <input type="password" name="pass" id="pass">
+            <br>
+            <input type="submit" value="Iniciar Sesion">
+        </form>
+    </div>
+{% endblock %}
