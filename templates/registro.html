@@ -1,0 +1,48 @@
+{% extends 'plantilla.html' %}
+
+{% block titulo %}
+    Registrarse
+{% endblock %}
+
+{% block pagina %}
+    Formulario de registro
+{% endblock %}
+
+{% block contenido %}
+    <div>
+        <form action="/registro" method="post">
+            <label for="correo">Correo: </label>
+            <input type="email" name="correo" id="correo">
+            <br>
+
+            <label for="nombre">Nombre(s): </label>
+            <input type="text" name="nombre" id="nombre">
+            <br>
+
+            <label for="apel">Apellidos: </label>
+            <input type="text" name="apel" id="apel">
+            <br>
+
+            <label for="pass">Contraseña: </label>
+            <input type="password" name="pass" id="pass">
+            <br>
+
+            <label for="pass2">Repite la contraseña: </label>
+            <input type="password" name="pass2" id="pass">
+            <br>
+            
+            <p>Estoy interesado en: </p>
+            <input type="checkbox" name="poke" id="busca">
+            <label for="poke">Pokémon</label>
+            <br>
+            <input type="checkbox" name="ilus" id="busca">
+            <label for="ilus">Ilustrador</label>
+            <br>
+            <input type="checkbox" name="spec" id="busca">
+            <label for="spec">Cartas con tematicas especificas</label>
+            <br>
+
+            <input type="submit" value="Registrarse">
+        </form>
+    </div>
+{% endblock %}
