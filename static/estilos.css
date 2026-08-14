@@ -22,7 +22,7 @@ header{
     color: #cbcbcb;
 }
 
-.menu{
+nav{
     background-color: #124d1c !important;
 }
 
@@ -35,7 +35,12 @@ li{
     text-decoration: none;
 }
 
-ul li a{
+.cont{
+    text-decoration: none;
+    color: black;
+}
+
+.menu{
     text-decoration: none;
     color: #cbcbcb;
 }
