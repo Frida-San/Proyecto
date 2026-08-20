@@ -8,6 +8,26 @@
     Hacer una publicacion
 {% endblock %}
 
+{% block menu %}
+    <ul class="nav nav-underline nav-fill">
+        <li class="nav-item">
+            <a class="nav-link" href="/" class="menu">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/registro" class="menu">Registro</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/login" class="menu">Inciar sesion</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/perfil" class="menu">Perfil</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/post" class="menu">Anadir publicacion</a>
+        </li>
+    </ul>
+{% endblock %}
+
 {% block contenido %}
     <div>
         <form action="/post" method="post">

@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../static/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap-utilities.min.css" integrity="sha512-7flOuFMKyEm+v9s00sIGnJmzT8WXx9sRYDdA+haxzjQv85xAYiY7+GbpC0I1wmrHJJ5VWQI61SForf7pnPQz8Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/js/all.min.js" integrity="sha512-2+f4MxT8KwN4tUzw6/hv9kxKiix603S9kmBcix+0y0dBhd6zdaPOV1Thf1DM886pFZG+cAtmshBi8UBpo6m3JA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/js/brands.min.js" integrity="sha512-+tqlT9MG+P9Cfr3eMSpmGotMMBtM5CYfRVwnrU39EAddEfOyH2yrStiEZ/yU57B35reTdH7CbqxxJibmxXy65Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
@@ -11,42 +14,38 @@
 </head>
 
 <body>
-    <header>
+     <!-- <header>
         <h1>CardAlley</h1>
         <h2>
-            {% block pagina %}
-            {% endblock %}
+            
         </h2>
-    </header>
+    </header>-->
 
-    <nav>
-        <ul>
-            <li>
-                <a href="/" class="menu">Inicio</a>
-            </li>
-            <li>
-                <a href="/registro" class="menu">Registro</a>
-            </li>
-            <li>
-                <a href="/login" class="menu">Inciar sesion</a>
-            </li>
-            <li>
-                <a href="/perfil" class="menu">Perfil</a>
-            </li>
-            <li>
-                <a href="/post" class="menu">Anadir publicacion</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-user-secret"></i>
+                CardAlley
+            </a>
+            {% block menu %}
+            
+            {% endblock %}
+        </div>
     </nav>
 
     <main>
+        <h1>
+            {% block pagina %}
+            
+            {% endblock %}
+        </h1>
         {% block contenido %}
             
         {% endblock %}
     </main>
 </body>
 
-<footer>
+<footer class="bg-body-tertiary" >
     <ul>
         <li>
             <a href="/contacto" class="menu">Contacto</a>
@@ -58,5 +57,51 @@
             <a href="/admblog" class="menu">Blog</a>
         </li>
     </ul>
+</footer>
+
+<footer class="bg-body-tertiary border-top mt-auto pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h5 class="mb-2"><i class="bi bi-box-seam me-2"></i>Acme</h5>
+        <p class="text-body-secondary small mb-0">Admin tooling for teams that ship. Since 2014.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="text-uppercase small fw-bold mb-3">Product</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a class="link-secondary text-decoration-none" href="#">Features</a></li>
+          <li class="mb-2"><a class="link-secondary text-decoration-none" href="#">Pricing</a></li>
+          <li class="mb-2"><a class="link-secondary text-decoration-none" href="#">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="text-uppercase small fw-bold mb-3">Company</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a class="link-secondary text-decoration-none" href="#">About</a></li>
+          <li class="mb-2"><a class="link-secondary text-decoration-none" href="#">Blog</a></li>
+          <li class="mb-2"><a class="link-secondary text-decoration-none" href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="text-uppercase small fw-bold mb-3">Resources</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a class="link-secondary text-decoration-none" href="#">Docs</a></li>
+          <li class="mb-2"><a class="link-secondary text-decoration-none" href="#">Support</a></li>
+          <li class="mb-2"><a class="link-secondary text-decoration-none" href="#">Status</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="text-uppercase small fw-bold mb-3">Legal</h6>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+          <li class="mb-2"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-top pt-3 mt-4 d-flex justify-content-between small text-body-secondary">
+      <span>&copy; 2026 Acme Inc.</span>
+      <span>Made with Bootstrap 5</span>
+    </div>
+  </div>
 </footer>
 </html>
