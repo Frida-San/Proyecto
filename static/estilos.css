@@ -12,7 +12,12 @@
 
 }
 
+h1{
+    padding-top: 3em;
+}
+
 body{
+    margin: 2em;
     background-color: #cbcbcb;
     color: black;
 }
