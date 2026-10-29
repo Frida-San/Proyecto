@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, url_for
 from dotenv import load_dotenv
 from config_server import Config #Aquí importa las configuraciones y los archivos de config_sesrver
