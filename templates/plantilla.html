@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="static/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap-utilities.min.css" integrity="sha512-7flOuFMKyEm+v9s00sIGnJmzT8WXx9sRYDdA+haxzjQv85xAYiY7+GbpC0I1wmrHJJ5VWQI61SForf7pnPQz8Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/js/all.min.js" integrity="sha512-2+f4MxT8KwN4tUzw6/hv9kxKiix603S9kmBcix+0y0dBhd6zdaPOV1Thf1DM886pFZG+cAtmshBi8UBpo6m3JA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -13,12 +14,12 @@
     </title>
 </head>
 
-<body class="p-3" class="pt-3"> <!--El p-3 es para el paddign con el borde de la pantalla y el contenido-->
+<body class="p-3" class="pt-3"> <!--El p-3 es para el padding con el borde de la pantalla y el contenido-->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <i class="fa-solid fa-user-secret"></i>
+    <nav>
+        <div>
+            <a>
+                <img src="static/img/CC_logo.png" height="32" width="32"></i>
                 CardAlley
             </a>
             {% block menu %}
@@ -36,6 +37,7 @@
         {% block contenido %}
             
         {% endblock %}
+        
     </main>
 </body>
 

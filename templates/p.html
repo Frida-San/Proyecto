@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Hoja de estilos CSS-->
+    <link rel="stylesheet" href="static/estilos.css"> 
+    <!--Impoprtar FontAwesome-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/js/all.min.js" integrity="sha512-2+f4MxT8KwN4tUzw6/hv9kxKiix603S9kmBcix+0y0dBhd6zdaPOV1Thf1DM886pFZG+cAtmshBi8UBpo6m3JA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/js/brands.min.js" integrity="sha512-+tqlT9MG+P9Cfr3eMSpmGotMMBtM5CYfRVwnrU39EAddEfOyH2yrStiEZ/yU57B35reTdH7CbqxxJibmxXy65Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--Importar fuentes desde Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--FUentes con import css-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    </style>
+    <title>
+        CC | {% block titulo %} 
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+    <nav> <!--Hacer jinja para link active. Lo del bootstrap del nav  link active se puede hacer con una clase de css "active", por ejemplo-->
+        <div class="navbar">
+            <div class="navitem" id="navlogo">
+                <a href="/">
+                <img class="imglogo" src="/static/img/CC_logo.png" alt="Common Cards">
+                </a>
+                <a class="cal-sans-regular"  id="navtitle" href="/">Common Cards</a>
+            </div>
+            <div class="navitem" id="navmenu">
+              <ul>
+                <li class="navlist">
+                    <a class="navlia" href="/">Inicio</a>
+                </li>
+                <li class="navlist">
+                    <a class="navlia" href="/login">Iniciar sesión</a>
+                </li>
+                <li class="navlist">
+                    <a class="navlia" href="/post">Añadir publicación</a>
+                </li>
+                </ul>  
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1>
+            {% block pagina %}
+                
+            {% endblock %}
+        </h1>
+        {% block contenido %}
+            
+        {% endblock %}
+    </main>
+</body>
+
+<footer>
+    <div class="fparent">
+        <div class="fcolumn" id="fcolt">
+            <img id="minilog" src="/static/img/CC_doble_byn.png" alt="Common Cards">
+            <h5 class="cal-sans-regular">Common cards</h5>
+        </div>
+        <div class="fcolumn" id="fcont1">
+            <h6>Perfil</h6>
+            <ul>
+                <li class="footli">
+                    <a class="footlia" href="/perfil">Mi perfil</a>
+                </li>
+                <li class="footli">
+                    <a class="footlia" href="/login">Iniciar sesión</a>
+                </li>
+                <li class="footli">
+                    <a class="footlia" href="/registro">Registrarse</a>
+                </li>
+            </ul>
+        </div>
+        <div class="fcolumn" id="fcont2">
+            <h6>Acerca de</h6>
+            <ul>
+                <li class="footli">
+                    <a class="footlia" href="/contacto">Contacto</a>
+                </li>
+                <li class="footli">
+                    <a class="footlia" href="/about">Acerca de nosotros</a>
+                </li>
+            </ul>
+        </div>
+        <div class="fcolumn" id="fcont3">
+            <h6>Recursos</h6>
+            <ul>
+                <li class="footli">
+                    <a class="footlia" href="/admblog">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</html>
